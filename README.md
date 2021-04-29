@@ -1,0 +1,2 @@
+# gatsbypractice
+tutorial de gatsby
