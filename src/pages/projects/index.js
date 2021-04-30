@@ -35,7 +35,8 @@ const PProjects = styled.p `
 
 export default function Projects({data}) {
     console.log(data);
-    const projects = data.allMarkdownRemark.nodes
+    const projects = data.projects.nodes
+    const contact = data.contact.siteMetadata.contact
     return (
         <Layout>
         <Portfoliodiv>
@@ -54,6 +55,7 @@ export default function Projects({data}) {
                         </Link>
                     ))}
             </DivProjects>
+            <PProjects>Like what you see? Email me at {contact} for a quote!</PProjects>   
         </Portfoliodiv>
         </Layout>
     )
@@ -63,15 +65,20 @@ export default function Projects({data}) {
 
 export const query =graphql`
 query ProjectsPage {
-  allMarkdownRemark {
+   projects: allMarkdownRemark(sort: {fields: frontmatter___title, order: DESC}) {
     nodes {
       frontmatter {
         slug
-        title
         stack
+        title
       }
       id
     }
+  }
+  contact: site{
+    siteMetadata{
+          contact
+      }
   }
 }
 

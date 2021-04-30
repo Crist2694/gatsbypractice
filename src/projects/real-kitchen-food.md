@@ -2,6 +2,7 @@
 title: The Dojo Coffe House
 stack: HTML & CSS
 slug: the-dojo-coffe-house
+date: 2021-01-01T00:00:00+00:00
 ---
 
 **Lorem ninja ipsum dolor sit ammet**, Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim vel quod eligendi, a odit molestiae adipisci magnam laudantium vitae ab odio minima tempora distinctio, optio earum dignissimos fugit excepturi ratione?
